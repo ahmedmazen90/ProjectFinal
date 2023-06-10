@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="610.0" prefWidth="472.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.RegisterController">
+
+    
+   <children>
+      <Pane prefHeight="797.0" prefWidth="472.0" style="-fx-background-color: #146C94;">
+         <children>
+            <Label alignment="CENTER" layoutX="78.0" layoutY="37.0" prefHeight="35.0" prefWidth="299.0" text="Sign in as new Patient ">
+               <font>
+                  <Font name="System Bold Italic" size="24.0" />
+               </font>
+            </Label>
+            <Label layoutX="71.0" layoutY="500.0" prefHeight="21.0" prefWidth="46.0" text="Email" textFill="WHITE">
+               <font>
+                  <Font name="System Bold Italic" size="15.0" />
+               </font>
+            </Label>
+            <Label layoutX="71.0" layoutY="117.0" text="UserName" textFill="#fff9f9">
+               <font>
+                  <Font name="System Bold Italic" size="15.0" />
+               </font>
+            </Label>
+            <Label layoutX="73.0" layoutY="699.0" prefHeight="21.0" prefWidth="46.0" text="Role" textFill="#eeeeee">
+               <font>
+                  <Font name="System Bold Italic" size="15.0" />
+               </font>
+            </Label>
+            <Label layoutX="73.0" layoutY="414.0" prefHeight="21.0" prefWidth="46.0" text="Age" textFill="WHITE">
+               <font>
+                  <Font name="System Bold Italic" size="15.0" />
+               </font>
+            </Label>
+            <Label layoutX="71.0" layoutY="193.0" prefHeight="21.0" prefWidth="85.0" text="Password" textFill="WHITE">
+               <font>
+                  <Font name="System Bold Italic" size="15.0" />
+               </font>
+            </Label>
+            <TextField fx:id="userTF" layoutX="71.0" layoutY="138.0" prefHeight="21.0" prefWidth="309.0" />
+            <PasswordField fx:id="passTF" layoutX="71.0" layoutY="214.0" prefHeight="21.0" prefWidth="309.0" />
+            <TextField fx:id="emailTF" layoutX="71.0" layoutY="521.0" prefHeight="21.0" prefWidth="309.0" />
+            <TextField fx:id="PhoneTF" layoutX="71.0" layoutY="601.0" prefHeight="21.0" prefWidth="309.0" />
+            <TextField fx:id="ageTF" layoutX="73.0" layoutY="435.0" prefHeight="21.0" prefWidth="309.0" />
+            <Button fx:id="signin" layoutX="242.0" layoutY="748.0" mnemonicParsing="false" onAction="#btnSignin" prefHeight="35.0" prefWidth="74.0" style="-fx-background-color: #00FFCA;" text="Sign in">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Button>
+            <Label layoutX="71.0" layoutY="342.0" prefHeight="21.0" prefWidth="85.0" text="last Name" textFill="WHITE">
+               <font>
+                  <Font name="System Bold Italic" size="15.0" />
+               </font>
+            </Label>
+            <Label layoutX="72.0" layoutY="268.0" prefHeight="21.0" prefWidth="91.0" text="First Name" textFill="WHITE">
+               <font>
+                  <Font name="System Bold Italic" size="15.0" />
+               </font>
+            </Label>
+            <Label layoutX="71.0" layoutY="580.0" prefHeight="21.0" prefWidth="46.0" text="Phone" textFill="WHITE">
+               <font>
+                  <Font name="System Bold Italic" size="15.0" />
+               </font>
+            </Label>
+            <TextField fx:id="FirstNameTF" layoutX="73.0" layoutY="289.0" prefHeight="21.0" prefWidth="309.0" />
+            <TextField fx:id="LastNameTF" layoutX="71.0" layoutY="363.0" prefHeight="21.0" prefWidth="309.0" />
+            <RadioButton fx:id="genderTF" layoutX="169.0" layoutY="655.0" mnemonicParsing="false" text="Male" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+               <toggleGroup>
+                  <ToggleGroup fx:id="genderGruop" />
+               </toggleGroup>
+            </RadioButton>
+            <RadioButton fx:id="genderTF" layoutX="279.0" layoutY="655.0" mnemonicParsing="false" text="Femal" textFill="WHITE" toggleGroup="$genderGruop">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </RadioButton>
+            <Label layoutX="75.0" layoutY="655.0" prefHeight="21.0" prefWidth="66.0" text="Gender" textFill="#eeeeee">
+               <font>
+                  <Font name="System Bold Italic" size="15.0" />
+               </font>
+            </Label>
+            <RadioButton fx:id="roleTF" layoutX="282.0" layoutY="699.0" mnemonicParsing="false" text="Patient" textFill="#ebe8e8">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+               <toggleGroup>
+                  <ToggleGroup fx:id="roleGruop" />
+               </toggleGroup>
+            </RadioButton>
+            <RadioButton fx:id="roleTF" layoutX="169.0" layoutY="699.0" mnemonicParsing="false" text="Admin" textFill="#fcfcfc" toggleGroup="$roleGruop">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </RadioButton>
+            <Button fx:id="BtnCancel" layoutX="132.0" layoutY="748.0" mnemonicParsing="false" onAction="#CancelRigester" prefHeight="35.0" prefWidth="74.0" style="-fx-background-color: #00FFCA;" text="Cancel">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Button>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>

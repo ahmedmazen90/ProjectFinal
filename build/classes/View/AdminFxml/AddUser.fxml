@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="795.0" prefWidth="1115.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.Admin.AddUserController">
+
+   <children>
+      <Pane prefHeight="795.0" prefWidth="1129.0" style="-fx-background-color: #DAF5FF;">
+         <children>
+            <Button fx:id="addnew" layoutX="636.0" layoutY="652.0" mnemonicParsing="false" onAction="#AddNewPatient" prefHeight="31.0" prefWidth="221.0" style="-fx-background-color: #03C988;" text="Add New Patient" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font></Button>
+            <Button fx:id="logout" layoutX="1016.0" layoutY="95.0" mnemonicParsing="false" onAction="#btnlogout" prefHeight="44.0" prefWidth="93.0" style="-fx-background-color: red;" text="Log Out" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Button>
+            <Pane prefHeight="76.0" prefWidth="1129.0" style="-fx-background-color: #0C134F;">
+               <children>
+                  <Label alignment="CENTER" layoutX="446.0" layoutY="19.0" prefHeight="38.0" prefWidth="237.0" text="Admin Dashboard" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold Italic" size="26.0" />
+                     </font>
+                  </Label>
+               </children>
+            </Pane>
+            <VBox alignment="CENTER" layoutX="14.0" layoutY="326.0" prefHeight="200.0" prefWidth="177.0" spacing="15.0">
+               <children>
+                  <Button fx:id="BtnpageUser" mnemonicParsing="false" onAction="#showPageUsers" prefHeight="38.0" prefWidth="178.0" style="-fx-background-color: #3e8bcf; -fx-background-radius: 100;" text="User Managment">
+                     <font>
+                        <Font name="System Bold Italic" size="17.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="BtnPageAppointments" mnemonicParsing="false" onAction="#showPageAppointments" prefWidth="178.0" style="-fx-background-color: #B0DAFF; -fx-background-radius: 100;" text="Appointmentes">
+                     <font>
+                        <Font name="System Bold Italic" size="17.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="BtnPageBooked" mnemonicParsing="false" onAction="#ShowPageBooked" prefHeight="38.0" prefWidth="178.0" style="-fx-background-color: #B0DAFF; -fx-background-radius: 100;" text="Booked">
+                     <font>
+                        <Font name="System Bold Italic" size="17.0" />
+                     </font>
+                  </Button>
+               </children>
+            </VBox>
+            <RadioButton layoutX="635.0" layoutY="548.0" mnemonicParsing="false" prefHeight="18.0" prefWidth="67.0" text="Male">
+               <toggleGroup>
+                  <ToggleGroup fx:id="genderGruop" />
+               </toggleGroup>
+            </RadioButton>
+            <RadioButton layoutX="746.0" layoutY="548.0" mnemonicParsing="false" text="FeMale" toggleGroup="$genderGruop" />
+            <RadioButton layoutX="747.0" layoutY="596.0" mnemonicParsing="false" text="Patient">
+               <toggleGroup>
+                  <ToggleGroup fx:id="roleGruop" />
+               </toggleGroup>
+            </RadioButton>
+            <RadioButton layoutX="635.0" layoutY="596.0" mnemonicParsing="false" text="Admin" toggleGroup="$roleGruop" />
+            <Label layoutX="482.0" layoutY="546.0" text="Gender">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Label>
+            <Label layoutX="492.0" layoutY="594.0" text="Role">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Label>
+            <GridPane layoutX="396.0" layoutY="152.0" prefHeight="374.0" prefWidth="467.0" vgap="15.0">
+              <columnConstraints>
+                <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                  <Label text="UserName">
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                  </Label>
+                  <Label text="FirstName" GridPane.rowIndex="2">
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                  </Label>
+                  <Label text="Lastname" GridPane.rowIndex="3">
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                  </Label>
+                  <Label text="Email" GridPane.rowIndex="4">
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                  </Label>
+                  <Label text="Phone" GridPane.rowIndex="5">
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                  </Label>
+                  <Label prefHeight="21.0" prefWidth="38.0" text="Age" GridPane.rowIndex="6">
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                  </Label>
+                  <Label text="Password" GridPane.rowIndex="1">
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="userTF" prefHeight="31.0" prefWidth="138.0" GridPane.columnIndex="1" />
+                  <TextField fx:id="passTF" prefHeight="31.0" prefWidth="138.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                  <TextField fx:id="FirstNameTF" prefHeight="31.0" prefWidth="138.0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                  <TextField fx:id="LastNameTF" prefHeight="31.0" prefWidth="138.0" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                  <TextField fx:id="emailTF" prefHeight="31.0" prefWidth="138.0" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                  <TextField fx:id="PhoneTF" prefHeight="31.0" prefWidth="138.0" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+                  <TextField fx:id="ageTF" prefHeight="31.0" prefWidth="138.0" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+               </children>
+            </GridPane>
+            <Button fx:id="BtnCancel" layoutX="473.0" layoutY="652.0" mnemonicParsing="false" onAction="#CancelAdd" prefHeight="31.0" prefWidth="100.0" style="-fx-background-color: #cc4242;" text="Cancel" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Button>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>
